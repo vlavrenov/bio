@@ -1,0 +1,3128 @@
+<html lang="en"><head><base target="_blank">
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vlav socials</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&amp;family=Montserrat:wght@400;600&amp;family=Open+Sans:wght@400;600&amp;family=Poppins:wght@400;600&amp;family=Roboto:wght@400&amp;family=Oswald:wght@400;600&amp;family=Raleway:wght@400;600&amp;family=Roboto+Slab:wght@400;600&amp;family=Bebas+Neue:wght@400;600&amp;family=Jost:wght@400;600&amp;family=Outfit:wght@400;600&amp;family=Pacifico:wght@400;600&amp;family=Comfortaa:wght@400;600&amp;family=Lobster:wght@400;600&amp;family=Caveat:wght@400;600&amp;family=Figtree:wght@400;600&amp;family=Satisfy:wght@400;600&amp;family=Archivo+Black:wght@400;600&amp;family=Urbanist:wght@400;600&amp;family=Luckiest+Guy:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        html {
+            height: 100%;
+            background: linear-gradient(to bottom, #333, #111);
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            overscroll-behavior: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            min-height: 100%;
+            position: relative;
+            overscroll-behavior: none;
+        }
+
+        .container {
+            width: 40%;
+            max-width: 600px;
+            margin-top: 5vh;
+            display: inline-block;
+            margin-bottom: 10vh;
+        }
+
+
+        #youtube-embed-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 1rem;
+            display: none;
+            z-index: 2;
+        }
+
+        .youtube-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .youtube-embed-wrapper {
+            padding-top: 56.25%;
+            position: relative;
+        }
+
+
+        .profile-picture {
+            height: 150px;
+            border: 3px solid white;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+            transition: transform 0.1s;
+        }
+
+        .profile-picture::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.3), transparent);
+            transform: translate(-50%, -75%) rotate(45deg);
+            transition: opacity 0.1s, transform 0.1s;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .link {
+            background-color: white;
+            color: black;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 1.25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            z-index: 2;
+            position: relative;
+        }
+
+
+        @media (max-width: 968px) {
+
+            .container {
+                width: 80%;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+            }
+
+
+            .profile-picture {
+                width: 100px;
+                height: 100px;
+            }
+
+            .link {
+                font-size: .95rem;
+            }
+        }
+
+        .menu-item label {
+            white-space: nowrap;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .font-selector {
+            background: white;
+            color: black;
+            border: 1px solid #ddd;
+            padding: 8px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        .input-label {
+            margin-right: 10px;
+            white-space: nowrap;
+            color: #fff;
+        }
+
+        .input-wrapper {
+            background: #fff;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            flex-grow: 0;
+        }
+
+        .input-field {
+            border: none;
+            outline: none;
+            padding: 0px;
+            border-radius: 5px 0 0 5px;
+            flex-grow: 0;
+        }
+
+        .submit-btn {
+            background-color: #53ae62;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn i {
+            font-size: 1.1rem;
+        }
+
+        .submit-btn:hover {
+            background-color: #439551;
+        }
+
+
+        .icon-btn i,
+        .icon-btn-delete i {
+            font-size: 1.5em;
+        }
+
+
+        #youtube-form input[type="text"] {
+            background-color: white;
+            color: black;
+            padding: 8px 12px;
+            border-radius: 5px 5px 0px 0px;
+            border: none;
+            width: calc(100%);
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        #youtube-form button {
+            background-color: #53ae62;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 0px 0px 5px 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        #youtube-form button:hover {
+            background-color: #439551;
+        }
+
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 70px;
+            height: 34px;
+            border-radius: 34px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #c9c9c9;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #57bd46;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(36px);
+        }
+
+        .upload-btn,
+        .apply-btn {
+            background-color: #53ae62;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 34px;
+            transition: transform 0.3s;
+        }
+
+        .upload-btn span {
+            margin-left: 8px;
+            font-size: 16px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: stretch;
+            align-items: stretch;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .apply-btn,
+        .save-btn {
+            flex: 1;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            padding: 15px 32px;
+            border: none;
+            flex-direction: column;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        .save-btn {
+            background-color: white;
+            color: black;
+        }
+
+        .upload-btn:hover,
+        .apply-btn:hover,
+        .save-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .icon-upload {
+            display: inline-block;
+            font-size: 18px;
+
+        }
+
+        .social-link-input {
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+            border: none;
+            padding: 8px;
+            width: 30%;
+        }
+
+        .social-icons-container i {
+            font-size: 30px;
+            margin: 0px 15px;
+            display: inline-block;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-icon-link {
+            color: inherit;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .social-icon-link i {
+            transition: transform 0.3s, box-shadow 0.3s;
+            /* Smooth transition for transform and box-shadow */
+        }
+
+        .social-icon-link:hover i {
+            transform: translateY(-4px);
+            /* Moves the icon up on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            /* Adds a drop shadow */
+        }
+
+
+
+        .icon-btn,
+        .icon-btn-delete {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            color: white;
+            flex-shrink: 0;
+            margin-left: 10px;
+        }
+
+        .menu {
+            display: visible;
+            background: #1b1b1b;
+            border-radius: 20px;
+            padding: 20px;
+            width: 400px;
+            color: white;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        #welcome-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #333, #111);
+            align-items: center;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: space-between;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .welcome-message {
+            max-width: 50%;
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
+            color: white;
+
+        }
+
+        .welcome-message h2 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        .welcome-message p {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+
+        }
+
+        .welcome-message h4 {
+            font-size: .5em;
+            margin-bottom: 4.5em;
+            font-weight: normal;
+        }
+
+        #welcome-overlay button {
+            border: none;
+            color: white;
+            padding: 13px 32px;
+            background-color: #53ae62;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            margin: 30px auto;
+            max-width: 250px;
+            margin-top: 70px;
+        }
+
+
+        .bottom-container {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+
+        .delete-btn-pastel-red {
+            background-color: #ff6961;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 8px 12px;
+            border: none;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .delete-btn-pastel-red:hover {
+            background-color: #fe5f55;
+        }
+
+        .input-group .delete-btn {
+            padding: 4px;
+            margin-left: 4px;
+            padding: 10px 20px;
+            background: #ff6961;
+            border-radius: 0 5px 5px 0;
+            transition: background-color 0.3s;
+        }
+
+        .input-group .delete-btn:hover {
+            background-color: #fe5f55;
+        }
+
+        .input-group .submit-btn {
+            background-color: #53ae62;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .input-group .submit-btn i {
+            font-size: 1.1rem;
+        }
+
+        .input-group .submit-btn:hover {
+            background-color: #439551;
+        }
+
+
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 8px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .social-link-input,
+        #name-input,
+        #profile-pic-link,
+        #background-link {
+            flex-grow: 1;
+            margin: 0 10px;
+            padding: 1px;
+        }
+
+        .input-group .icon-btn,
+        .icon-btn-delete {
+            border: none;
+            padding: 10px 10px 10px 10px;
+            margin: 0;
+            font-size: .8rem;
+        }
+
+
+        .input-group .icon-btn {
+            background: #53ae62;
+            color: white;
+            flex-shrink: 0;
+            border-radius: 0;
+        }
+
+        .input-group .icon-btn-delete {
+            background: #bc2e2e;
+            color: white;
+            flex-shrink: 0;
+            border-radius: 0;
+        }
+
+        .input-group .icon-btn-delete:hover {
+            background: #9e2b2b
+        }
+
+
+        .input-group input {
+            padding: 10px 0px 10px 5px;
+            margin: 0;
+            font-size: .8rem;
+            border: none;
+            flex-grow: 1;
+            max-width: 128.5px;
+        }
+
+
+        .input-group .icon-btn:hover {
+            background-color: #439551;
+        }
+
+        .input-group .delete-btn:hover {
+            background-color: #fe5f55;
+        }
+
+        .input-group .icon-btn.options-btn {
+            background: #888;
+            color: white;
+        }
+
+        .input-group .icon-btn.options-btn:hover {
+            background: #777777;
+        }
+
+        .options-menu {
+            display: none;
+            position: fixed;
+            background: #1b1b1b;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            color: white;
+            z-index: 1100;
+        }
+
+        .options-menu-title {
+            margin-top: 9px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 22px;
+            color: white;
+        }
+
+        @keyframes popAnimation {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.11);
+            }
+        }
+
+
+        @keyframes wobbleAnimation {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-8px);
+            }
+
+            50% {
+                transform: translateX(8px);
+            }
+
+            75% {
+                transform: translateX(-8px);
+            }
+        }
+
+        @keyframes wiggleAnimation {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-1deg);
+            }
+
+            50% {
+                transform: rotate(2deg);
+            }
+
+            75% {
+                transform: rotate(-1deg);
+            }
+        }
+
+        .animated-link {
+            animation: popAnimation 3s infinite;
+        }
+
+        .animated-wobble {
+            animation: wobbleAnimation 3s infinite;
+        }
+
+        .animated-wiggle {
+            animation: wiggleAnimation 3s infinite;
+        }
+
+        .animation-btn {
+            background-color: #1b1b1b;
+            color: white;
+            padding: 6px 10px;
+            margin: 5px 0;
+            font-size: 0.9rem;
+            border: 1px solid white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: none;
+        }
+
+        .animation-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+
+
+
+        .animation-options-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+
+        #mobile-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 3000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mobile-message {
+            background: white;
+            max-width: 50%;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 968px) {
+            #mobile-overlay {
+                display: flex;
+            }
+        }
+
+        #password-input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        #password-submit {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #53ae62;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.6s;
+        }
+
+        #password-submit:hover {
+            background-color: #439551;
+        }
+
+        #welcome-overlay .input-wrapper {
+            margin: 20px auto;
+            width: auto;
+        }
+
+        #welcome-overlay .input-field {
+            padding: 10px;
+            margin: 0;
+            border: 1px solid #ddd;
+            flex-grow: 1;
+            border-radius: 5px 0 0 5px;
+        }
+
+        #welcome-overlay .submit-btn {
+            padding: 10px 20px;
+            margin: 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #welcome-overlay .submit-btn:after {
+            content: "Enter";
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 1rem;
+        }
+
+        #welcome-overlay .submit-btn .bx-check {
+            display: none;
+        }
+
+        #password-error {
+            margin-top: 10px;
+        }
+
+        .btn-on {
+            background-color: white;
+            color: black;
+            border: 1px solid white;
+        }
+
+        .btn-off {
+            background-color: #1b1b1b;
+            color: white;
+            border: 1px solid white;
+        }
+
+        .activate-btn {
+            background-color: #53ae62;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .deactivate-btn {
+            background-color: #bc2e2e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .activate-btn:hover {
+            background-color: #439551;
+        }
+
+        .deactivate-btn:hover {
+            background-color: #a32727;
+        }
+
+        #config-keypad-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+
+        #keypad-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .keypad-popup {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 185px;
+        }
+
+        .code-display {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .code-slot {
+            width: 40px;
+            height: 40px;
+            background: #f0f0f0;
+            border-radius: 5px;
+            color: #000;
+            font-size: 30px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .keypad button {
+            background: #e0e0e0;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            color: black;
+        }
+
+        .keypad-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .keypad-actions button {
+            background-color: #6f6f6f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 2px;
+        }
+
+
+
+        .link-title {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .bx-lock-alt {
+            margin-left: auto;
+            /* Push the icon to the right */
+        }
+
+        .dob-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .dob-popup {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 237px;
+            min-height: 160px;
+        }
+
+        .dob-input {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: calc(90%);
+            min-width: 90%;
+            font-family: 'Poppins';
+            color: black;
+        }
+
+        /* Add CSS for the submit button inside the DOB popup */
+        .dob-popup button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #6f6f6f;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dob-instruction {
+            color: #aaa;
+            margin-bottom: 2px;
+            font-size: 0.9em;
+        }
+
+        .dob-actions {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 10px;
+        }
+
+        .position-btn-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 218.41px;
+            height: 37px;
+        }
+
+        .position-btn {
+            flex: 1;
+            border: none;
+            background-color: #ffffff;
+            color: rgb(49, 49, 49);
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid rgb(234, 234, 234);
+            transition: background-color 0.3s;
+            border-radius: 0;
+            /* Remove border-radius to make it look like one button */
+            margin: 0;
+            /* Remove margin between buttons */
+            height: 100%;
+        }
+
+        .position-btn:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .position-btn:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+
+        .favicon-container,
+        .lock-icon-container {
+            width: 24px;
+            /* Adjust this value based on the size of your icons */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .link-title {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .link-icon {
+            height: 20px;
+            /* Adjust this value based on the size of your icons */
+        }
+
+        /* Container for the up and down buttons */
+        .move-btn-container {
+            display: flex;
+            flex-direction: column;
+            /* Stack buttons vertically */
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Up and down buttons */
+        .move-btn {
+            background-color: transparent;
+            /* Remove background color */
+            color: rgb(79, 79, 79);
+            /* Set color to a darker white */
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        /* Change color to white on hover */
+        .move-btn:hover {
+            color: rgb(20, 20, 20);
+        }
+
+        #background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            /* Adjust the opacity as needed */
+            z-index: 1;
+            /* Ensure this is higher than the z-index of other elements */
+            pointer-events: none;
+        }
+
+        .container,
+        #social-icons-container,
+        .profile-picture,
+        .link {
+            z-index: 2;
+            /* Lower than the overlay */
+        }
+
+
+        #background-effects-menu {
+            display: none;
+            background: #1b1b1b;
+            border-radius: 20px;
+            padding: 20px;
+            width: 400px;
+            color: white;
+            position: absolute;
+            top: 490px;
+            /* Position as per your requirement */
+            right: 20px;
+            z-index: 1000;
+        }
+
+        #grain-overlay {
+            mix-blend-mode: overlay;
+        }
+
+        .profile-shape-menu {
+            display: flex;
+            justify-content: center;
+        }
+
+        .shape-option {
+            background-color: #53ae62;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin: 10px 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .shape-option:hover {
+            background-color: #439551;
+        }
+    </style>
+<style type="text/css" id="operaUserStyle"></style></head>
+
+<body style="background-image: url(&quot;https://images.unsplash.com/photo-1531257114315-24a694751517?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&quot;); background-position: center center; background-size: cover; background-repeat: no-repeat;">
+
+    <div id="mobile-overlay" style="display: none;">
+        <div class="mobile-message">
+            <p>Sorry, the Link-In-Bio Page Maker is only allowed on desktop.</p>
+        </div>
+    </div>
+
+
+    
+
+
+
+
+    <div class="container">
+        <div class="profile-picture" style="max-width: 150px; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px; border: 3px solid white; --darkreader-inline-boxshadow: rgba(0, 0, 0, 0.5) 0px 4px 8px; --darkreader-inline-border-top: #303436; --darkreader-inline-border-right: #303436; --darkreader-inline-border-bottom: #303436; --darkreader-inline-border-left: #303436;" data-darkreader-inline-boxshadow="" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+            <img src="https://i.imgur.com/pYWX2RD.png" alt="Profile Picture" style="object-fit: cover;">
+        </div>
+        <h1 style="font-family: Montserrat; color: rgb(255, 255, 255); --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color="">vlav</h1>
+
+        <!-- Social Media Icons (Initially empty) -->
+        
+
+        <!-- YouTube Embed Container (Initially hidden) -->
+        <div id="youtube-embed-container" style="display: none; margin-top: 1rem; margin-bottom: 1rem;"></div>
+
+
+
+        <div class="menu main-links-menu" id="main-links-menu" style="top: 490px; display: none;">
+            <div id="link-form-container">
+                <!-- Initial link form will be added by JavaScript -->
+            
+        <div class="input-group" id="link-form-12">
+            <div class="move-btn-container">
+                <button class="move-btn" onclick="moveFormUp('link-form-12')"><i class="bx bx-chevron-up"></i></button>
+                <button class="move-btn" onclick="moveFormDown('link-form-12')"><i class="bx bx-chevron-down"></i></button>
+            </div>
+            <input type="text" placeholder="Title" class="link-title-input" value="Youtube">
+            <input type="text" placeholder="URL" class="link-url-input" value="https://www.youtube.com/@vlavrenov?sub_confirmation=1">
+            <button class="icon-btn" onclick="confirmLink('link-form-12')"><i class="bx bx-check" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+            <button class="icon-btn options-btn" onclick="showOptions('link-form-12')"><i class="bx bx-cog" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+            <button class="icon-btn-delete" onclick="deleteLink('link-form-12')"><i class="bx bx-x" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+        </div><div class="input-group" id="link-form-8">
+            <div class="move-btn-container">
+                <button class="move-btn" onclick="moveFormUp('link-form-8')"><i class="bx bx-chevron-up"></i></button>
+                <button class="move-btn" onclick="moveFormDown('link-form-8')"><i class="bx bx-chevron-down"></i></button>
+            </div>
+            <input type="text" placeholder="Title" class="link-title-input" value="Twitch">
+            <input type="text" placeholder="URL" class="link-url-input" value="https://www.twitch.tv/vlavrenov">
+            <button class="icon-btn" onclick="confirmLink('link-form-8')"><i class="bx bx-check" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+            <button class="icon-btn options-btn" onclick="showOptions('link-form-8')"><i class="bx bx-cog" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+            <button class="icon-btn-delete" onclick="deleteLink('link-form-8')"><i class="bx bx-x" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+        </div>
+        <div class="input-group" id="link-form-10">
+            <div class="move-btn-container">
+                <button class="move-btn" onclick="moveFormUp('link-form-10')"><i class="bx bx-chevron-up"></i></button>
+                <button class="move-btn" onclick="moveFormDown('link-form-10')"><i class="bx bx-chevron-down"></i></button>
+            </div>
+            <input type="text" placeholder="Title" class="link-title-input" value="TikTok">
+            <input type="text" placeholder="URL" class="link-url-input" value="https://www.tiktok.com/@realvlav">
+            <button class="icon-btn" onclick="confirmLink('link-form-10')"><i class="bx bx-check" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+            <button class="icon-btn options-btn" onclick="showOptions('link-form-10')"><i class="bx bx-cog" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+            <button class="icon-btn-delete" onclick="deleteLink('link-form-10')"><i class="bx bx-x" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+        </div>
+        <div class="input-group" id="link-form-11">
+            <div class="move-btn-container">
+                <button class="move-btn" onclick="moveFormUp('link-form-11')"><i class="bx bx-chevron-up"></i></button>
+                <button class="move-btn" onclick="moveFormDown('link-form-11')"><i class="bx bx-chevron-down"></i></button>
+            </div>
+            <input type="text" placeholder="Title" class="link-title-input" value="My discord server">
+            <input type="text" placeholder="URL" class="link-url-input" value="https://discord.com/invite/aFYgAJ7S5k">
+            <button class="icon-btn" onclick="confirmLink('link-form-11')"><i class="bx bx-check" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+            <button class="icon-btn options-btn" onclick="showOptions('link-form-11')"><i class="bx bx-cog" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+            <button class="icon-btn-delete" onclick="deleteLink('link-form-11')"><i class="bx bx-x" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+        </div><div class="input-group" id="link-form-9">
+            <div class="move-btn-container">
+                <button class="move-btn" onclick="moveFormUp('link-form-9')"><i class="bx bx-chevron-up"></i></button>
+                <button class="move-btn" onclick="moveFormDown('link-form-9')"><i class="bx bx-chevron-down"></i></button>
+            </div>
+            <input type="text" placeholder="Title" class="link-title-input" value="Twitter">
+            <input type="text" placeholder="URL" class="link-url-input" value="https://twitter.com/realvlav">
+            <button class="icon-btn" onclick="confirmLink('link-form-9')"><i class="bx bx-check" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+            <button class="icon-btn options-btn" onclick="showOptions('link-form-9')"><i class="bx bx-cog" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+            <button class="icon-btn-delete" onclick="deleteLink('link-form-9')"><i class="bx bx-x" style="color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i></button>
+        </div>
+        
+        
+        
+        
+        </div>
+            <div style="text-align: center">
+                <button class="icon-btn" id="add-link-btn"><i class="bx bx-plus" style="color: green; font-size: 24px;"></i></button>
+            </div>
+        </div>
+
+
+        <!-- Menu Section -->
+        <div class="menu" style="display: none;">
+            <!-- Name Menu Item with Color Picker -->
+            <div class="menu-item">
+                <label for="name-input" class="input-label">Name</label>
+                <input type="color" id="name-color-picker" class="input-field" style="visibility: hidden; width: 0; height: 0; position: absolute;">
+                <button class="icon-btn color-picker-trigger" id="color-picker-trigger" style="margin-left: 80px;">
+                    <i class="bx bxs-palette" style="color: rgb(255, 255, 255); --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></i>
+                </button>
+                <div class="input-wrapper">
+                    <input type="text" id="name-input" placeholder="Your Name" class="input-field" value="vlav">
+                    <button class="submit-btn" id="submit-name">
+                        <i class="bx bx-check"></i>
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Profile Picture Link Input -->
+            <div class="menu-item">
+                <label for="profile-pic-link" class="input-label">Profile Picture</label>
+                <button class="icon-btn" id="profile-shape-trigger" style="margin-left: 20px;">
+                    <i class="bx bxs-palette"></i>
+                </button>
+                <div class="input-wrapper">
+                    <input type="text" id="profile-pic-link" placeholder="Enter image URL" class="input-field" value="https://i.imgur.com/pYWX2RD.png">
+                    <button class="submit-btn" id="submit-profile-pic">
+                        <i class="bx bx-check"></i>
+                    </button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Background Picture Link Input with Palette Icon -->
+            <div class="menu-item">
+                <label for="background-link" class="input-label">Background</label>
+                <button class="icon-btn" id="background-effects-trigger" style="margin-left: 25px;">
+                    <i class="bx bxs-palette"></i>
+                </button>
+                <div class="input-wrapper">
+                    <input type="text" id="background-link" placeholder="Enter image URL" class="input-field" value="https://images.unsplash.com/photo-1531257114315-24a694751517?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    <button class="submit-btn" id="submit-background">
+                        <i class="bx bx-check"></i>
+                    </button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Font Choice -->
+            <div class="menu-item">
+                <label for="font-selector" class="input-label">Choose Font</label>
+                <select id="font-selector" class="font-selector">
+                    <option value="Poppins" style="font-family: 'Poppins', sans-serif;">Poppins</option>
+                    <option value="Roboto" style="font-family: 'Roboto', sans-serif;">Roboto</option>
+                    <option value="Montserrat" style="font-family: 'Montserrat', sans-serif;">Montserrat</option>
+                    <option value="Open Sans" style="font-family: 'Open Sans', sans-serif;">Open Sans</option>
+                    <option value="Lato" style="font-family: 'Lato', sans-serif;">Lato</option>
+                    <option value="Oswald" style="font-family: 'Oswald', sans-serif;">Oswald</option>
+                    <option value="Raleway" style="font-family: 'Raleway', sans-serif;">Raleway</option>
+                    <option value="Roboto Slab" style="font-family: 'Roboto Slab', serif;">Roboto Slab</option>
+                    <option value="Bebas Neue" style="font-family: 'Bebas Neue', cursive;">Bebas Neue</option>
+                    <option value="Jost" style="font-family: 'Jost', sans-serif;">Jost</option>
+                    <option value="Outfit" style="font-family: 'Outfit', sans-serif;">Outfit</option>
+                    <option value="Pacifico" style="font-family: 'Pacifico', cursive;">Pacifico</option>
+                    <option value="Comfortaa" style="font-family: 'Comfortaa', cursive;">Comfortaa</option>
+                    <option value="Lobster" style="font-family: 'Lobster', cursive;">Lobster</option>
+                    <option value="Caveat" style="font-family: 'Caveat', cursive;">Caveat</option>
+                    <option value="Figtree" style="font-family: 'Figtree', sans-serif;">Figtree</option>
+                    <option value="Satisfy" style="font-family: 'Satisfy', cursive;">Satisfy</option>
+                    <option value="Archivo Black" style="font-family: 'Archivo Black', sans-serif;">Archivo Black
+                    </option>
+                    <option value="Urbanist" style="font-family: 'Urbanist', sans-serif;">Urbanist</option>
+                    <option value="Luckiest Guy" style="font-family: 'Luckiest Guy', cursive;">Luckiest Guy</option>
+                </select>
+
+
+            </div>
+
+
+            <!-- Main Links Slider -->
+            <div class="menu-item">
+                <label for="main-links">Main Links</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="main-links-toggle" checked="checked">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+
+            <!-- Main Links Submenu -->
+            <div class="menu main-links-menu" id="main-links-menu" style="display: none; top: 490px;">
+                <div id="link-form-container">
+                    <!-- Dynamically added link forms will go here -->
+                </div>
+                <div style="text-align: center; margin-top: 10px;">
+                    <button class="icon-btn" id="add-link-btn"><i class="bx bx-plus" style="color: green; font-size: 24px;"></i></button>
+                </div>
+            </div>
+
+
+            <div class="menu-item">
+                <label for="youtube">YouTube Embed</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="youtube-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <!-- YouTube Form (Initially hidden) -->
+            <div id="youtube-form" style="display: none;">
+                <input type="text" id="youtube-link" placeholder="Enter YouTube Video Link" value="">
+                <button id="youtube-submit">Submit</button>
+            </div>
+
+            <div class="menu-item">
+                <label for="social-icons">Social Icons</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="social-icons-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <!-- Button container -->
+            <div class="button-container">
+                <button class="save-btn" id="save-progress-btn">Save Progress</button>
+                <button class="apply-btn" id="download-btn">
+                    Download
+                </button>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- New Submenu for Background Effects -->
+        <div class="background-effects-menu" id="background-effects-menu" style="display: none;">
+            <span class="close-btn" onclick="toggleBackgroundEffectsMenu(false)"><i class="bx bx-x"></i></span>
+            <div class="menu-item" style="margin-top: 20px;">
+                <label for="background-darken-slider" class="input-label">Darken</label>
+                <input type="range" id="background-darken-slider" class="background-darken-slider" min="0" max="10" value="0">
+            </div>
+            <div class="menu-item">
+                <label for="background-blur-slider" class="input-label">Blur</label>
+                <input type="range" id="background-blur-slider" class="background-blur-slider" min="0" max="10" value="0">
+            </div>
+            <div class="menu-item">
+                <label for="background-grain-slider" class="input-label">Grain</label>
+                <input type="range" id="background-grain-slider" class="background-grain-slider" min="0" max="10" value="0">
+            </div>
+
+        </div>
+
+
+
+        <!-- Profile Picture Shape Options Submenu -->
+        <div class="menu profile-shape-menu" id="profile-shape-menu" style="display: none; top: 490px;">
+            <div class="shape-option" data-shape="circle">Circle</div>
+            <div class="shape-option" data-shape="square">Square</div>
+            <div class="shape-option" data-shape="none">None</div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Social Icons Submenu (Initially hidden) -->
+        <div class="menu social-icons-menu" id="social-icons-menu" style="display: none; top: 490px;">
+            <!-- Social Media Platforms List -->
+            <div class="menu-item" id="social-form-youtube">
+                <label>YouTube</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Insert Link" class="social-link-input" id="input-youtube" style="max-width: none;" value="https://www.youtube.com/@vlavrenov?sub_confirmation=1">
+                    <button class="icon-btn" onclick="submitSocialLink('youtube')"><i class="bx bx-check" style="color: white;"></i></button>
+                    <button class="icon-btn-delete" onclick="removeSocialLink('youtube')"><i class="bx bx-x" style="color: white;"></i></button>
+                </div>
+            </div>
+            <div class="menu-item" id="social-form-instagram">
+                <label>Instagram</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Insert Link" class="social-link-input" id="input-instagram" style="max-width: none;" value="">
+                    <button class="icon-btn" onclick="submitSocialLink('instagram')"><i class="bx bx-check" style="color: white;"></i></button>
+                    <button class="icon-btn-delete" onclick="removeSocialLink('instagram')"><i class="bx bx-x" style="color: white;"></i></button>
+                </div>
+            </div>
+            <div class="menu-item" id="social-form-facebook">
+                <label>Facebook</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Insert Link" class="social-link-input" id="input-facebook" style="max-width: none;" value="">
+                    <button class="icon-btn" onclick="submitSocialLink('facebook')"><i class="bx bx-check" style="color: white;"></i></button>
+                    <button class="icon-btn-delete" onclick="removeSocialLink('facebook')"><i class="bx bx-x" style="color: white;"></i></button>
+                </div>
+            </div>
+            <div class="menu-item" id="social-form-linkedin">
+                <label>LinkedIn</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Insert Link" class="social-link-input" id="input-linkedin" style="max-width: none;" value="">
+                    <button class="icon-btn" onclick="submitSocialLink('linkedin')"><i class="bx bx-check" style="color: white;"></i></button>
+                    <button class="icon-btn-delete" onclick="removeSocialLink('linkedin')"><i class="bx bx-x" style="color: white;"></i></button>
+                </div>
+            </div>
+            <div class="menu-item" id="social-form-discord">
+                <label>Discord</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Insert Link" class="social-link-input" id="input-discord-alt" style="max-width: none;" value="https://discord.com/invite/aFYgAJ7S5k">
+                    <button class="icon-btn" onclick="submitSocialLink('discord-alt')"><i class="bx bx-check" style="color: white;"></i></button>
+                    <button class="icon-btn-delete" onclick="removeSocialLink('discord-alt')"><i class="bx bx-x" style="color: white;"></i></button>
+                </div>
+            </div>
+            <div class="menu-item" id="social-form-tiktok">
+                <label>TikTok</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Insert Link" class="social-link-input" id="input-tiktok" style="max-width: none;" value="https://www.tiktok.com/@realvlav">
+                    <button class="icon-btn" onclick="submitSocialLink('tiktok')"><i class="bx bx-check" style="color: white;"></i></button>
+                    <button class="icon-btn-delete" onclick="removeSocialLink('tiktok')"><i class="bx bx-x" style="color: white;"></i></button>
+                </div>
+            </div>
+            <!-- Repeat similar blocks for Twitch, Instagram, Facebook, TikTok, LinkedIn, Discord, Twitter (X) -->
+            <div class="menu-item" id="social-form-x">
+                <label>X</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Insert Link" class="social-link-input" id="input-x" style="max-width: none;" value="https://twitter.com/realvlav">
+                    <button class="icon-btn" onclick="submitSocialLink('x')"><i class="bx bx-check" style="color: white;"></i></button>
+                    <button class="icon-btn-delete" onclick="removeSocialLink('x')"><i class="bx bx-x" style="color: white;"></i></button>
+                </div>
+            </div>
+
+            <!-- Position Option -->
+            <div class="menu-item">
+                <label for="social-position">Position</label>
+                <div class="position-btn-container">
+                    <button class="position-btn animation-btn" id="position-top">Top</button>
+                    <button class="position-btn animation-btn" id="position-bottom">Bottom</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="background-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.3); z-index: 1; --darkreader-inline-bgcolor: rgba(0, 0, 0, 0.3); backdrop-filter: blur(6px);" data-darkreader-inline-bgcolor="">
+        </div>
+
+
+        <div id="grain-overlay" style="display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background-image: url(&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/2k_Dissolve_Noise_Texture.png/1024px-2k_Dissolve_Noise_Texture.png&quot;); background-size: cover; opacity: 0;">
+        </div>
+
+    <a class="link" data-form-id="link-form-12" href="https://www.youtube.com/@vlavrenov?sub_confirmation=1" style="background-color: rgb(255, 255, 255); color: black; border-radius: 20px;">
+        <div class="favicon-container"><img src="https://www.google.com/s2/favicons?sz=32&amp;domain=www.youtube.com" alt="" class="link-icon" style="visibility: visible; display: inline;"></div>
+        <span class="link-title">Youtube</span>
+        <div class="lock-icon-container"><i class="bx bx-lock-alt link-icon" style="display: none;"></i></div></a><a class="link" data-form-id="link-form-8" href="https://www.twitch.tv/vlavrenov" style="border-radius: 20px; background-color: rgb(255, 255, 255); color: black; --darkreader-inline-bgcolor: #181a1b; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-bgcolor="" data-darkreader-inline-color="">
+        <div class="favicon-container"><img src="https://www.google.com/s2/favicons?sz=32&amp;domain=www.twitch.tv" alt="" class="link-icon" style="visibility: visible; display: inline;"></div>
+        <span class="link-title">Twitch</span>
+        <div class="lock-icon-container"><i class="bx bx-lock-alt link-icon" style="display: none;"></i></div></a><a class="link" data-form-id="link-form-10" href="https://www.tiktok.com/@realvlav" style="border-radius: 20px; background-color: rgb(255, 255, 255); color: black; --darkreader-inline-bgcolor: #181a1b; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-bgcolor="" data-darkreader-inline-color="">
+        <div class="favicon-container"><img src="https://www.google.com/s2/favicons?sz=32&amp;domain=www.tiktok.com" alt="" class="link-icon" style="visibility: visible; display: inline;"></div>
+        <span class="link-title">TikTok</span>
+        <div class="lock-icon-container"><i class="bx bx-lock-alt link-icon" style="display: none;"></i></div></a><a class="link" data-form-id="link-form-11" href="https://discord.com/invite/aFYgAJ7S5k" style="border-radius: 20px; background-color: rgb(255, 255, 255); color: black; --darkreader-inline-bgcolor: #181a1b; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-bgcolor="" data-darkreader-inline-color="">
+        <div class="favicon-container"><img src="https://www.google.com/s2/favicons?sz=32&amp;domain=discord.com" alt="" class="link-icon" style="visibility: visible; display: inline;"></div>
+        <span class="link-title">My discord server</span>
+        <div class="lock-icon-container"><i class="bx bx-lock-alt link-icon" style="display: none;"></i></div></a><a class="link" data-form-id="link-form-9" href="https://twitter.com/realvlav" style="border-radius: 20px; background-color: rgb(255, 255, 255); color: black; --darkreader-inline-bgcolor: #181a1b; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-bgcolor="" data-darkreader-inline-color="">
+        <div class="favicon-container"><img src="https://www.google.com/s2/favicons?sz=32&amp;domain=twitter.com" alt="" class="link-icon" style="visibility: visible; display: inline;"></div>
+        <span class="link-title">Twitter</span>
+        <div class="lock-icon-container"><i class="bx bx-lock-alt link-icon" style="display: none;"></i></div></a><div class="social-icons-container" id="social-icons-container" style="text-align: center; margin-top: 20px;">
+        <a href="https://www.youtube.com/@vlavrenov?sub_confirmation=1" target="_blank" class="social-icon-link"><i class="bx bxl-youtube"></i></a><a href="https://discord.com/invite/aFYgAJ7S5k" target="_blank" class="social-icon-link"><i class="bx bxl-discord-alt"></i></a><a href="https://www.tiktok.com/@realvlav" target="_blank" class="social-icon-link"><i class="bx bxl-tiktok"></i></a><a href="https://twitter.com/realvlav" target="_blank" class="social-icon-link"><i class="fa-brands fa-x-twitter" style="font-size: 25px; position: relative; top: -4px;"></i></a></div></div>
+
+
+    <!-- Configuration Keypad Overlay -->
+    <div id="config-keypad-overlay" style="display: none;" data-form-id="link-form-7">
+        <div class="keypad-popup">
+            <div class="code-display">
+                <div class="code-slot"></div>
+                <div class="code-slot"></div>
+                <div class="code-slot"></div>
+                <div class="code-slot"></div>
+            </div>
+            <div class="keypad">
+                <!-- Add buttons for numbers 0-9 -->
+                <button onclick="enterConfigCodeDigit('1')">1</button>
+                <button onclick="enterConfigCodeDigit('2')">2</button>
+                <button onclick="enterConfigCodeDigit('3')">3</button>
+                <button onclick="enterConfigCodeDigit('4')">4</button>
+                <button onclick="enterConfigCodeDigit('5')">5</button>
+                <button onclick="enterConfigCodeDigit('6')">6</button>
+                <button onclick="enterConfigCodeDigit('7')">7</button>
+                <button onclick="enterConfigCodeDigit('8')">8</button>
+                <button onclick="enterConfigCodeDigit('9')">9</button>
+                <div></div> <!-- Empty grid cell -->
+                <button onclick="enterConfigCodeDigit('0')">0</button>
+                <div></div> <!-- Empty grid cell -->
+            </div>
+            <div class="keypad-actions">
+                <button onclick="acceptConfigCode()">Set Code</button>
+                <button onclick="cancelConfigCode()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Keypad Overlay -->
+    <div id="keypad-overlay" style="display: none;">
+        <div class="keypad-popup">
+            <div class="code-display">
+                <div class="code-slot"></div>
+                <div class="code-slot"></div>
+                <div class="code-slot"></div>
+                <div class="code-slot"></div>
+            </div>
+            <div class="keypad">
+                <!-- Add buttons for numbers 0-9 -->
+                <button onclick="enterCodeDigit('1')">1</button>
+                <button onclick="enterCodeDigit('2')">2</button>
+                <button onclick="enterCodeDigit('3')">3</button>
+                <button onclick="enterCodeDigit('4')">4</button>
+                <button onclick="enterCodeDigit('5')">5</button>
+                <button onclick="enterCodeDigit('6')">6</button>
+                <button onclick="enterCodeDigit('7')">7</button>
+                <button onclick="enterCodeDigit('8')">8</button>
+                <button onclick="enterCodeDigit('9')">9</button>
+                <div></div> <!-- Empty grid cell -->
+                <button onclick="enterCodeDigit('0')">0</button>
+                <div></div> <!-- Empty grid cell -->
+            </div>
+            <div class="keypad-actions">
+                <button onclick="acceptCode()">Accept</button>
+                <button onclick="cancelCode()">Cancel</button>
+            </div>
+            <p id="keypad-error" style="color: red; display: none;">Incorrect pin</p> <!-- Add this line -->
+
+        </div>
+    </div>
+
+
+    <script>
+        // JavaScript for the name
+        document.getElementById('submit-name').addEventListener('click', function () {
+            const nameValue = document.getElementById('name-input').value;
+            document.querySelector('h1').textContent = nameValue;
+        });
+
+        // Event listener for the color picker trigger button
+        document.getElementById('color-picker-trigger').addEventListener('click', function () {
+            document.getElementById('name-color-picker').click(); // Trigger click on the actual input
+        });
+
+        // Event listener for the color picker
+        document.getElementById('name-color-picker').addEventListener('change', function () {
+            const color = this.value;
+            document.querySelector('h1').style.color = color; // Change the color of the name
+            document.getElementById('color-picker-trigger').querySelector('i').style.color = color; // Change the color of the icon
+        });
+
+
+
+        // JavaScript for the profile picture upload
+        document.getElementById('submit-profile-pic').addEventListener('click', function () {
+            const imageUrl = document.getElementById('profile-pic-link').value;
+            if (imageUrl) {
+                const profilePic = document.querySelector('.profile-picture img');
+                profilePic.src = imageUrl;
+            }
+        });
+
+
+        // JavaScript for the background image submission using a URL
+        document.getElementById('submit-background').addEventListener('click', function () {
+            const backgroundUrl = document.getElementById('background-link').value;
+            if (backgroundUrl) {
+                document.body.style.backgroundImage = 'url(' + backgroundUrl + ')';
+                document.body.style.backgroundPosition = 'center';
+                document.body.style.backgroundSize = 'cover';
+                document.body.style.backgroundRepeat = 'no-repeat';
+            }
+        });
+
+        // Function to toggle submenu display and adjust other submenus
+        function toggleSubMenu(subMenuId, isOpen) {
+            const subMenu = document.getElementById(subMenuId);
+            if (subMenu) {
+                subMenu.style.display = isOpen ? 'block' : 'none';
+            }
+            toggleOtherSubMenu(subMenuId);
+        }
+
+
+        // Function to toggle other submenus off
+        function toggleOtherSubMenu(currentSubMenuId) {
+            const subMenus = {
+                'main-links-menu': 'main-links-toggle',
+                'social-icons-menu': 'social-icons-toggle',
+                'youtube-form': 'youtube-toggle',
+                'background-effects-menu': 'background-effects-trigger',
+                'profile-shape-menu': 'profile-shape-trigger',
+            };
+            for (const [menuId, toggleId] of Object.entries(subMenus)) {
+                if (menuId !== currentSubMenuId) {
+                    document.getElementById(toggleId).checked = false;
+                    document.getElementById(menuId).style.display = 'none';
+                }
+            }
+            // Close all options menus if the main links menu is closed
+            if (currentSubMenuId === 'main-links-menu' && !document.getElementById('main-links-toggle').checked) {
+                closeAllOptionsMenus();
+            }
+        }
+
+
+        // Event listener for the Main Links toggle checkbox
+        document.getElementById('main-links-toggle').addEventListener('change', function () {
+            toggleSubMenu('main-links-menu', this.checked);
+            if (!this.checked) {
+                // Close all Options menus when the Main Links menu is closed
+                closeAllOptionsMenus();
+            }
+            adjustSocialMenuPosition();
+        });
+
+        // Function to close all Options menus
+        function closeAllOptionsMenus() {
+            const optionsMenus = document.querySelectorAll('.options-menu');
+            optionsMenus.forEach(menu => {
+                menu.style.display = 'none';
+            });
+        }
+
+        // Event listener for the Social Icons toggle checkbox
+        document.getElementById('social-icons-toggle').addEventListener('change', function () {
+            toggleSubMenu('social-icons-menu', this.checked);
+            if (this.checked) {
+                closeAllOptionsMenus(); // Close all Options menus
+            }
+        });
+
+        // Event listener for the YouTube toggle checkbox
+        document.getElementById('youtube-toggle').addEventListener('change', function () {
+            toggleSubMenu('youtube-form', this.checked); // Updated to use toggleSubMenu
+            const youtubeEmbedContainer = document.getElementById('youtube-embed-container');
+            youtubeEmbedContainer.style.display = this.checked ? 'block' : 'none';
+            youtubeEmbedContainer.innerHTML = ''; // Clear the embed when toggled off
+            if (this.checked) {
+                closeAllOptionsMenus(); // Close all Options menus
+            }
+        });
+
+
+        // Adjust the position of social menu
+        function adjustSocialMenuPosition() {
+            const mainLinksMenu = document.getElementById('main-links-menu');
+            const socialIconsMenu = document.getElementById('social-icons-menu');
+            if (mainLinksMenu && socialIconsMenu) {
+                if (mainLinksMenu.style.display === 'none') {
+                    // Position the social menu closer to the main menu
+                    socialIconsMenu.style.top = '490px'; // Adjust this value as needed
+                } else {
+                    // Position the social menu further down
+                    socialIconsMenu.style.top = '490px'; // Adjust this value as needed
+                }
+            }
+        }
+
+
+        // Config Code Keypad
+        let enteredConfigCode = '';
+
+        function applyLockOption(formId, option) {
+            const link = document.querySelector(`.link[data-form-id="${formId}"]`);
+            if (link) {
+                link.dataset.lockOption = option;
+                if (option === 'code') {
+                    // Check if a code is already set for this link
+                    if (link.dataset.lockCode) {
+                        // If a code is already set, prompt the user to update it
+                        const newCode = prompt('A code is already set for this link. Enter a new code (4 digits):', link.dataset.lockCode);
+                        if (newCode && newCode.length === 4) {
+                            // Update the code if the user enters a valid new code
+                            link.dataset.lockCode = newCode;
+                            alert('Code updated successfully!');
+                            highlightLockOptionButton(formId, 'code'); // Highlight the "Code" button
+                        } else {
+                            alert('Invalid code. The code must be 4 digits.');
+                        }
+                    } else {
+                        // If no code is set, show the configuration keypad to set a new code
+                        showConfigKeypad(formId);
+                        highlightLockOptionButton(formId, 'code'); // Highlight the "Code" button
+                    }
+                } else if (option === 'dob') {
+                    // Add lock icon and overlay for DOB
+                    addLockIcon(link);
+                    createOverlay(formId, 'dob');
+                    highlightLockOptionButton(formId, 'dob'); // Highlight the "DOB" button
+                } else {
+                    // If the option is not 'code', remove any existing lock code and overlay
+                    delete link.dataset.lockCode;
+                    removeLockIcon(link);
+                    const overlay = document.querySelector(`.overlay[data-form-id="${formId}"]`);
+                    if (overlay) {
+                        overlay.remove();
+                    }
+                    highlightLockOptionButton(formId, 'none'); // Highlight the "None" button
+                }
+            }
+        }
+
+        // Function to highlight the selected lock option button
+        function highlightLockOptionButton(formId, option) {
+            const optionsMenu = document.getElementById(`options-menu-${formId}`);
+            if (optionsMenu) {
+                const lockOptionButtons = optionsMenu.querySelectorAll('.lock-option-btn');
+                lockOptionButtons.forEach(button => {
+                    if (button.textContent.toLowerCase() === option) {
+                        button.classList.add('btn-on');
+                        button.classList.remove('btn-off');
+                    } else {
+                        button.classList.remove('btn-on');
+                        button.classList.add('btn-off');
+                    }
+                });
+            }
+        }
+
+
+        // Call this function to set the default lock option to "None" for a specific link or all links
+        function setDefaultLockOption(formId = null) {
+            const links = formId ? [document.querySelector(`.link[data-form-id="${formId}"]`)] : document.querySelectorAll('.link');
+            links.forEach(link => {
+                if (link) {
+                    const linkFormId = link.getAttribute('data-form-id');
+                    highlightLockOptionButton(linkFormId, 'none'); // Highlight the "None" button by default
+                }
+            });
+        }
+
+
+
+        function showConfigKeypad(formId) {
+            document.getElementById('config-keypad-overlay').style.display = 'flex';
+            document.getElementById('config-keypad-overlay').dataset.formId = formId;
+        }
+
+        function enterConfigCodeDigit(digit) {
+            if (enteredConfigCode.length < 4) {
+                enteredConfigCode += digit;
+                updateConfigCodeDisplay();
+            }
+        }
+
+        function updateConfigCodeDisplay() {
+            const codeSlots = document.querySelectorAll('#config-keypad-overlay .code-slot');
+            codeSlots.forEach((slot, index) => {
+                slot.textContent = enteredConfigCode[index] ? '•' : '';
+            });
+        }
+
+        // Modify the acceptConfigCode function to highlight the "Code" button only after setting the code
+        function acceptConfigCode() {
+            if (enteredConfigCode.length === 4) {
+                const formId = document.getElementById('config-keypad-overlay').dataset.formId;
+                const link = document.querySelector(`.link[data-form-id="${formId}"]`);
+                if (link) {
+                    link.dataset.lockCode = enteredConfigCode;
+                    createOverlay(formId, 'code'); // For code lock
+                    addLockIcon(link);
+                    highlightLockOptionButton(formId, 'code'); // Highlight the "Code" button only after setting the code
+                }
+                alert('Code set successfully!');
+                hideConfigKeypad();
+            } else {
+                alert('Please enter a 4-digit code.');
+            }
+        }
+
+        function addLockIcon(link) {
+            const icon = link.querySelector('.bx-lock-alt');
+            if (icon) {
+                icon.style.display = 'inline-block'; // Show the icon
+            }
+        }
+
+        function removeLockIcon(link) {
+            const icon = link.querySelector('.bx-lock-alt');
+            if (icon) {
+                icon.style.display = 'none'; // Hide the icon
+            }
+        }
+
+
+        function cancelConfigCode() {
+            hideConfigKeypad();
+        }
+
+        function hideConfigKeypad() {
+            document.getElementById('config-keypad-overlay').style.display = 'none';
+            enteredConfigCode = '';
+            updateConfigCodeDisplay();
+        }
+
+        // User Code Keypad
+        let enteredCode = '';
+
+        function createOverlay(formId, lockType) {
+            const link = document.querySelector(`.link[data-form-id="${formId}"]`);
+            let overlay = document.querySelector(`.overlay[data-form-id="${formId}"]`);
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.className = 'overlay';
+                overlay.setAttribute('data-form-id', formId);
+                overlay.setAttribute('data-lock-type', lockType); // Add the lock type as a data attribute
+                document.body.appendChild(overlay);
+            }
+            overlay.style.position = 'absolute';
+            overlay.style.width = `${link.offsetWidth}px`;
+            overlay.style.height = `${link.offsetHeight}px`;
+            overlay.style.top = `${link.offsetTop}px`;
+            overlay.style.left = `${link.offsetLeft}px`;
+            overlay.style.zIndex = '10';
+            overlay.style.cursor = 'pointer';
+        }
+
+        window.addEventListener('resize', function () {
+            document.querySelectorAll('.overlay').forEach(overlay => {
+                const formId = overlay.getAttribute('data-form-id');
+                const link = document.querySelector(`.link[data-form-id="${formId}"]`);
+                if (link) {
+                    overlay.style.width = `${link.offsetWidth}px`;
+                    overlay.style.height = `${link.offsetHeight}px`;
+                    overlay.style.top = `${link.offsetTop}px`;
+                    overlay.style.left = `${link.offsetLeft}px`;
+                }
+            });
+        });
+
+
+
+
+
+
+        // JavaScript to toggle the background effects menu
+        function toggleBackgroundEffectsMenu(show) {
+            const menu = document.getElementById('background-effects-menu');
+            const triggerBtn = document.getElementById('background-effects-trigger');
+            const rect = triggerBtn.getBoundingClientRect();
+            menu.style.display = show ? 'block' : 'none';
+        }
+
+
+        // Event listener for the palette icon
+        document.getElementById('background-effects-trigger').addEventListener('click', function () {
+            toggleBackgroundEffectsMenu(true);
+        });
+
+        // JavaScript to update the darken effect based on the slider value
+        document.getElementById('background-darken-slider').addEventListener('input', function () {
+            const level = this.value;
+            const overlay = document.getElementById('background-overlay');
+            overlay.style.backgroundColor = `rgba(0, 0, 0, ${level / 10})`;
+        });
+
+        document.getElementById('background-blur-slider').addEventListener('input', function () {
+            const blurLevel = this.value;
+            const overlay = document.getElementById('background-overlay');
+            overlay.style.backdropFilter = `blur(${blurLevel}px)`;
+        });
+
+        document.getElementById('background-grain-slider').addEventListener('input', function () {
+            const grainLevel = this.value;
+            const grainOverlay = document.getElementById('grain-overlay');
+            grainOverlay.style.opacity = grainLevel / 20;
+        });
+
+        function toggleBackgroundEffectsMenu(show) {
+            const menu = document.getElementById('background-effects-menu');
+            menu.style.display = show ? 'block' : 'none';
+        }
+
+        // Ensure the grain overlay is always visible but with 0 opacity initially
+        document.getElementById('grain-overlay').style.display = 'block';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // JavaScript for the profile picture shape options
+        document.getElementById('profile-shape-trigger').addEventListener('click', function () {
+            toggleSubMenu('profile-shape-menu', true);
+        });
+
+        // Event listener for shape options
+        document.querySelectorAll('.shape-option').forEach(option => {
+            option.addEventListener('click', function () {
+                const shape = this.dataset.shape;
+                applyProfileShape(shape);
+                toggleSubMenu('profile-shape-menu', false); // Close the shape options menu
+            });
+        });
+
+        function applyProfileShape(shape) {
+    const profilePic = document.querySelector('.profile-picture');
+    const profilePicImg = document.querySelector('.profile-picture img');
+    switch (shape) {
+        case 'circle':
+            profilePic.style.maxWidth = '150px';
+            profilePic.style.borderRadius = '50%';
+            profilePic.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.5)';
+            profilePic.style.border = '3px solid white'; // Set border color to white
+            profilePicImg.style.objectFit = 'cover'; // Scale to fill (cover the entire container)
+            break;
+        case 'square':
+            profilePic.style.maxWidth = '150px';
+            profilePic.style.borderRadius = '0';
+            profilePic.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.5)';
+            profilePic.style.border = '3px solid white'; // Set border color to white
+            profilePicImg.style.objectFit = 'cover'; // Scale to fill (cover the entire container)
+            break;
+        case 'none':
+            profilePic.style.maxWidth = '200px'; // Set a maximum width
+            profilePic.style.borderRadius = '0%';
+            profilePic.style.boxShadow = 'none';
+            profilePic.style.border = '0px solid transparent'; // Set border color to transparent
+            profilePicImg.style.objectFit = 'contain'; // Scale to fit (maintain aspect ratio without cropping)
+            break;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Attach a single event listener to the document for handling overlay clicks
+        document.addEventListener('click', function (event) {
+            if (event.target.classList.contains('overlay')) {
+                const formId = event.target.getAttribute('data-form-id');
+                const lockType = event.target.getAttribute('data-lock-type');
+                if (lockType === 'dob') {
+                    showDobPrompt(formId);
+                } else if (lockType === 'code') {
+                    showKeypad(formId);
+                }
+            }
+        });
+
+
+        function showKeypad(formId) {
+            document.getElementById('keypad-overlay').style.display = 'flex';
+            document.getElementById('keypad-overlay').dataset.formId = formId;
+            enteredCode = '';
+            updateCodeDisplay();
+        }
+
+        function hideKeypad() {
+            document.getElementById('keypad-overlay').style.display = 'none';
+            enteredCode = '';
+            updateCodeDisplay();
+        }
+
+        function enterCodeDigit(digit) {
+            if (enteredCode.length < 4) {
+                enteredCode += digit;
+                updateCodeDisplay();
+            }
+        }
+
+
+        function updateCodeDisplay() {
+            const codeSlots = document.querySelectorAll('#keypad-overlay .code-slot');
+            codeSlots.forEach((slot, index) => {
+                slot.textContent = enteredCode[index] ? '•' : '';
+            });
+        }
+
+
+        function acceptCode() {
+            const formId = document.getElementById('keypad-overlay').dataset.formId;
+            const link = document.querySelector(`.link[data-form-id="${formId}"]`);
+            const overlay = document.querySelector(`.overlay[data-form-id="${formId}"]`);
+            const keypadError = document.getElementById('keypad-error'); // Get the error element
+
+            if (link && enteredCode === link.dataset.lockCode) {
+                hideKeypad();
+                overlay.remove();
+                removeLockIcon(link);
+                keypadError.style.display = 'none'; // Hide the error message
+            } else {
+                keypadError.style.display = 'block'; // Show the error message
+                enteredCode = '';
+                updateCodeDisplay();
+            }
+        }
+
+
+        function cancelCode() {
+            hideKeypad();
+            enteredCode = '';
+            updateCodeDisplay();
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            hideKeypad();
+        });
+
+
+        function updateOverlaysPosition() {
+            document.querySelectorAll('.link').forEach(link => {
+                const formId = link.dataset.formId;
+                const overlay = document.querySelector(`.overlay[data-form-id="${formId}"]`);
+                if (overlay) {
+                    overlay.style.width = `${link.offsetWidth}px`;
+                    overlay.style.height = `${link.offsetHeight}px`;
+                    overlay.style.top = `${link.offsetTop}px`;
+                    overlay.style.left = `${link.offsetLeft}px`;
+                }
+            });
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key >= '0' && event.key <= '9') {
+                if (document.getElementById('keypad-overlay').style.display === 'flex') {
+                    enterCodeDigit(event.key);
+                } else if (document.getElementById('config-keypad-overlay').style.display === 'flex') {
+                    enterConfigCodeDigit(event.key);
+                }
+            } else if (event.key === 'Enter') {
+                if (document.getElementById('keypad-overlay').style.display === 'flex') {
+                    acceptCode();
+                } else if (document.getElementById('config-keypad-overlay').style.display === 'flex') {
+                    acceptConfigCode();
+                }
+            } else if (event.key === 'Escape') {
+                if (document.getElementById('keypad-overlay').style.display === 'flex') {
+                    cancelCode();
+                } else if (document.getElementById('config-keypad-overlay').style.display === 'flex') {
+                    cancelConfigCode();
+                }
+            }
+        });
+
+        function showDobPrompt(formId) {
+            const dobOverlay = document.createElement('div');
+            dobOverlay.id = `dob-overlay-${formId}`;
+            dobOverlay.className = 'dob-overlay';
+            dobOverlay.innerHTML = `
+            <div class="dob-popup">
+    <p class="dob-instruction">Enter your date of birth:</p>
+    <input type="date" id="dob-input-${formId}" class="dob-input">
+    <div class="dob-actions">
+    <button onclick="checkDob('${formId}')">Submit</button>
+    <button onclick="closeDobPopup('${formId}')">Cancel</button>
+</div>
+<p id="dob-error-${formId}" style="color: red; display: none;">You must be 18 years or older</p> <!-- Add this line -->
+</div>
+`;
+            document.body.appendChild(dobOverlay);
+
+            // Add event listeners for the Enter and Escape keys
+            const dobInput = document.getElementById(`dob-input-${formId}`);
+            dobInput.addEventListener('keypress', function (event) {
+                if (event.key === 'Enter') {
+                    checkDob(formId);
+                }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeDobPopup(formId);
+                }
+            });
+
+        }
+
+        function checkDob(formId) {
+            const dobInput = document.getElementById(`dob-input-${formId}`);
+            const dob = new Date(dobInput.value);
+            const age = calculateAge(dob);
+            const dobError = document.getElementById(`dob-error-${formId}`); // Get the error element
+
+            if (age >= 18) {
+                const dobOverlay = document.getElementById(`dob-overlay-${formId}`);
+                dobOverlay.remove();
+                unlockLink(formId);
+                dobError.style.display = 'none'; // Hide the error message
+            } else {
+                dobError.style.display = 'block'; // Show the error message
+            }
+        }
+
+
+        function calculateAge(dob) {
+            const today = new Date();
+            let age = today.getFullYear() - dob.getFullYear();
+            const m = today.getMonth() - dob.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        function unlockLink(formId) {
+            const link = document.querySelector(`.link[data-form-id="${formId}"]`);
+            if (link) {
+                link.classList.remove('locked');
+                const lockIcon = link.querySelector('.bx-lock-alt');
+                if (lockIcon) {
+                    lockIcon.style.display = 'none';
+                }
+                // Remove the overlay
+                const overlay = document.querySelector(`.overlay[data-form-id="${formId}"]`);
+                if (overlay) {
+                    overlay.remove();
+                }
+            }
+        }
+
+        function closeDobPopup(formId) {
+            const dobOverlay = document.getElementById(`dob-overlay-${formId}`);
+            if (dobOverlay) {
+                dobOverlay.remove();
+            }
+        }
+
+        // Font Choice
+        document.getElementById('font-selector').addEventListener('change', function () {
+            const selectedFont = this.value;
+            document.querySelector('h1').style.fontFamily = selectedFont;
+            document.querySelectorAll('.link').forEach(link => {
+                link.style.fontFamily = selectedFont;
+            });
+        });
+
+
+        // JavaScript for the YouTube Embed
+        function getYoutubeVideoID(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+
+        // Event listener for the YouTube toggle checkbox
+        document.getElementById('youtube-toggle').addEventListener('change', function () {
+            toggleSubMenu('youtube-form', this.checked); // Updated to use toggleSubMenu
+            const youtubeEmbedContainer = document.getElementById('youtube-embed-container');
+            youtubeEmbedContainer.style.display = this.checked ? 'block' : 'none';
+            youtubeEmbedContainer.innerHTML = ''; // Clear the embed when toggled off
+        });
+
+        // Event listener for the YouTube form submit button
+        document.getElementById('youtube-submit').addEventListener('click', function () {
+            const videoLink = document.getElementById('youtube-link').value;
+            const videoID = getYoutubeVideoID(videoLink);
+            const youtubeEmbedContainer = document.getElementById('youtube-embed-container');
+            const youtubeForm = document.getElementById('youtube-form');
+
+            if (videoID) {
+                const embedUrl = `https://www.youtube.com/embed/${videoID}?autoplay=0`; // Add ?autoplay=0 to disable autoplay
+                youtubeEmbedContainer.innerHTML = `
+                <div class="youtube-embed-wrapper">
+                    <iframe class="youtube-iframe" src="${embedUrl}" frameborder="0" allowfullscreen></iframe>
+                </div>`;
+                youtubeEmbedContainer.style.display = 'block';
+                youtubeForm.style.display = 'none'; // Hide the form after submission
+                document.getElementById('youtube-link').value = ''; // Optional: Clear the input field
+            }
+        });
+
+
+
+        // Call this function on window load and whenever the main menu might change size
+        window.onload = adjustSocialMenuPosition;
+
+        function getLuminance(color) {
+            const rgb = parseInt(color.substring(1), 16);
+            const r = (rgb >> 16) & 0xff;
+            const g = (rgb >> 8) & 0xff;
+            const b = (rgb >> 0) & 0xff;
+            return 0.2126 * (r / 255) + 0.7152 * (g / 255) + 0.0722 * (b / 255);
+        }
+
+
+        // Add Social Links
+        function submitSocialLink(platform) {
+            const inputId = 'input-' + platform;
+            const link = document.getElementById(inputId).value;
+            if (link) {
+                const iconContainer = document.getElementById('social-icons-container');
+                // Determine the appropriate class and style for the icon
+                const iconClass = platform === 'x' ? 'fa-brands fa-x-twitter' : 'bx bxl-' + platform;
+                const iconStyle = platform === 'x' ? 'style="font-size: 25px; position: relative; top: -4px;"' : '';
+                // Check if an icon for this platform already exists
+                const existingIcon = iconContainer.querySelector(`.social-icon-link .${platform === 'x' ? 'fa-x-twitter' : 'bxl-' + platform}`);
+                if (!existingIcon) {
+                    // If no existing icon, add the new icon
+                    iconContainer.innerHTML += `<a href="${link}" target="_blank" class="social-icon-link"><i class='${iconClass}' ${iconStyle}></i></a>`;
+                } else {
+                    // If an icon already exists, update its href attribute
+                    existingIcon.parentElement.href = link;
+                }
+            }
+        }
+
+
+
+
+        // Remove Social Links
+        function removeSocialLink(platform) {
+            const iconContainer = document.getElementById('social-icons-container');
+            const iconClass = platform === 'x' ? 'fa-x-twitter' : 'bxl-' + platform;
+            const iconLink = iconContainer.querySelector(`.social-icon-link i.${iconClass}`).parentNode;
+            if (iconLink) {
+                iconContainer.removeChild(iconLink);
+            }
+            const inputId = 'input-' + platform;
+            document.getElementById(inputId).value = '';
+        }
+
+        // Event listener for the "Top" position button
+        document.getElementById('position-top').addEventListener('click', function () {
+            const socialIconsContainer = document.getElementById('social-icons-container');
+            const nameElement = document.querySelector('h1');
+            const container = document.querySelector('.container');
+            container.insertBefore(socialIconsContainer, nameElement.nextSibling); // Place below the name
+        });
+        // Event listener for the "Bottom" position button
+        document.getElementById('position-bottom').addEventListener('click', function () {
+            const socialIconsContainer = document.getElementById('social-icons-container');
+            socialIconsContainer.style.marginTop = '20px'; // Add some space
+            const container = document.querySelector('.container');
+            container.appendChild(socialIconsContainer); // Move to the bottom
+        });
+
+
+        // Function to confirm the creation or update of a link
+        function confirmLink(formId) {
+            const form = document.getElementById(formId);
+            const titleInput = form.querySelector('.link-title-input').value.trim();
+            const urlInput = form.querySelector('.link-url-input').value.trim();
+
+            let link = document.querySelector(`.link[data-form-id="${formId}"]`);
+            if (!link) {
+                // If the link doesn't exist, create it
+                link = document.createElement('a');
+                link.className = 'link';
+                link.setAttribute('data-form-id', formId);
+                document.querySelector('.container').appendChild(link);
+            }
+
+            // Include containers for the favicon and lock icon, with placeholders
+            link.innerHTML = `
+        <div class="favicon-container"><img src="" alt="" class="link-icon" style="visibility: hidden;"></div>
+        <span class="link-title">${titleInput}</span>
+        <div class="lock-icon-container"><i class="bx bx-lock-alt link-icon" style="display: none;"></i></div>`;
+
+            // Show the lock icon if the link is locked
+            if (link.dataset.lockOption === 'code' || link.dataset.lockOption === 'dob') {
+                const lockIcon = link.querySelector('.bx-lock-alt');
+                lockIcon.style.display = 'inline-block';
+            }
+
+            if (urlInput) {
+                try {
+                    const domain = new URL(urlInput).hostname;
+                    const faviconURL = `https://www.google.com/s2/favicons?sz=32&domain=${domain}`;
+                    const favicon = link.querySelector('.favicon-container img');
+
+                    // Check if the favicon is available and display it
+                    const img = new Image();
+                    img.onload = function () {
+                        favicon.src = faviconURL;
+                        favicon.style.visibility = 'visible';
+                    };
+                    img.onerror = function () {
+                        favicon.style.visibility = 'hidden'; // Hide favicon if not available
+                    };
+                    img.src = faviconURL;
+                } catch (error) {
+                    console.error("Invalid URL for favicon:", urlInput);
+                }
+            }
+
+            link.href = urlInput;
+
+            // Add a new form only if this is the last form
+            if (form === document.querySelector('.input-group:last-child')) {
+                addLinkForm();
+            }
+        }
+
+
+
+
+
+        // Function to delete a link form and its associated link
+        function deleteLink(formId) {
+            const form = document.getElementById(formId);
+            if (form) {
+                // Remove the displayed link associated with the form, if it exists
+                const link = document.querySelector(`.link[data-form-id="${formId}"]`);
+                if (link) {
+                    link.parentNode.removeChild(link); // Remove the link element
+                }
+
+                // Remove the overlay associated with the link, if it exists
+                const overlay = document.querySelector(`.overlay[data-form-id="${formId}"]`);
+                if (overlay) {
+                    overlay.parentNode.removeChild(overlay); // Remove the overlay element
+                }
+
+                // Remove the form element itself
+                form.parentNode.removeChild(form);
+
+                // Remove the options sub-menu related to the link form, if it exists
+                const optionsMenuId = `options-menu-${formId}`;
+                const optionsMenu = document.getElementById(optionsMenuId);
+                if (optionsMenu) {
+                    optionsMenu.parentNode.removeChild(optionsMenu);
+                }
+                // Update the position of all overlays
+                updateOverlaysPosition();
+            }
+        }
+
+
+
+        // Event listener for the Add Link button
+        document.getElementById('add-link-btn').addEventListener('click', addLinkForm);
+
+        let formCount = 0; // Initialize formCount to keep track of the number of forms
+
+        // Function to initialize the page on load
+        window.onload = function () {
+            const existingForms = document.querySelectorAll('.input-group');
+            formCount = existingForms.length; // Update formCount based on existing forms
+            existingForms.forEach(form => {
+                const formId = form.getAttribute('id');
+                // Add event listeners to existing forms
+                form.querySelector('.link-title-input').addEventListener('input', () => confirmLink(formId));
+                form.querySelector('.link-url-input').addEventListener('input', () => confirmLink(formId));
+            });
+
+            // Add an initial form if there are no forms or the last form has been used
+            if (formCount === 0 || existingForms[formCount - 1].querySelector('.link-title-input').value) {
+                addLinkForm();
+            }
+            setDefaultLockOption();
+        };
+
+
+        function addLinkForm() {
+            const formContainer = document.getElementById('link-form-container');
+            const formId = `link-form-${formCount++}`; // Increment formCount for a unique ID
+            const formHtml = `
+        <div class="input-group" id="${formId}">
+            <div class="move-btn-container">
+                <button class="move-btn" onclick="moveFormUp('${formId}')"><i class='bx bx-chevron-up'></i></button>
+                <button class="move-btn" onclick="moveFormDown('${formId}')"><i class='bx bx-chevron-down'></i></button>
+            </div>
+            <input type="text" placeholder="Title" class="link-title-input">
+            <input type="text" placeholder="URL" class="link-url-input">
+            <button class="icon-btn" onclick="confirmLink('${formId}')"><i class='bx bx-check' style="color: white;"></i></button>
+            <button class="icon-btn options-btn" onclick="showOptions('${formId}')"><i class='bx bx-cog' style="color: white;"></i></button>
+            <button class="icon-btn-delete" onclick="deleteLink('${formId}')"><i class='bx bx-x' style="color: white;"></i></button>
+        </div>`;
+            formContainer.insertAdjacentHTML('beforeend', formHtml);
+
+            createOptionsSubMenu(formId);
+            setDefaultLockOption(formId);
+        }
+
+
+
+        function moveFormUp(formId) {
+            const formElement = document.getElementById(formId);
+            const previousForm = formElement.previousElementSibling;
+            if (previousForm && previousForm.classList.contains('input-group')) {
+                formElement.parentNode.insertBefore(formElement, previousForm);
+
+                // Move the corresponding link and overlay
+                const link = document.querySelector(`.link[data-form-id="${formId}"]`);
+                const previousLink = document.querySelector(`.link[data-form-id="${previousForm.id}"]`);
+                if (link && previousLink) {
+                    link.parentNode.insertBefore(link, previousLink);
+
+                    // Update the position of the overlay
+                    updateOverlayPosition(formId);
+                    updateOverlayPosition(previousForm.id);
+                }
+            }
+        }
+
+        function moveFormDown(formId) {
+            const formElement = document.getElementById(formId);
+            const nextForm = formElement.nextElementSibling;
+            if (nextForm && nextForm.classList.contains('input-group')) {
+                nextForm.parentNode.insertBefore(formElement, nextForm.nextSibling);
+
+                // Move the corresponding link and overlay
+                const link = document.querySelector(`.link[data-form-id="${formId}"]`);
+                const nextLink = document.querySelector(`.link[data-form-id="${nextForm.id}"]`);
+                if (link && nextLink) {
+                    nextLink.parentNode.insertBefore(link, nextLink.nextSibling);
+
+                    // Update the position of the overlay
+                    updateOverlayPosition(formId);
+                    updateOverlayPosition(nextForm.id);
+                }
+            }
+        }
+
+        function updateOverlayPosition(formId) {
+            const link = document.querySelector(`.link[data-form-id="${formId}"]`);
+            const overlay = document.querySelector(`.overlay[data-form-id="${formId}"]`);
+            if (link && overlay) {
+                overlay.style.top = `${link.offsetTop}px`;
+                overlay.style.left = `${link.offsetLeft}px`;
+                overlay.style.width = `${link.offsetWidth}px`;
+                overlay.style.height = `${link.offsetHeight}px`;
+            }
+        }
+
+
+
+
+
+
+        // Global variable to track the currently animated link
+        let currentlyAnimatedLinkId = null;
+
+        function createOptionsSubMenu(formId, title) {
+            // Only create the options menu if it doesn't already exist
+            if (!document.getElementById(`options-menu-${formId}`)) {
+                const optionsMenu = document.createElement('div');
+                optionsMenu.id = `options-menu-${formId}`;
+                optionsMenu.className = 'options-menu';
+                optionsMenu.innerHTML = `
+    <span class="close-btn" onclick="closeOptionsMenu('${formId}')"><i class='bx bx-x'></i></span>
+    <div class="animation-options-header">${title ? `<strong>${title}</strong>` : 'Options'}</div>
+    <div class="options-menu-title">Animation</div>
+    <button class="animation-btn" onclick="applyAnimation('${formId}', 'none')">None</button>
+    <button class="animation-btn" onclick="applyAnimation('${formId}', 'pop')">Pop</button>
+    <button class="animation-btn" onclick="applyAnimation('${formId}', 'wobble')">Wobble</button>
+    <button class="animation-btn" onclick="applyAnimation('${formId}', 'wiggle')">Wiggle</button>
+    <div class="options-menu-title">Favicon</div>
+        <button class="animation-btn favicon-toggle-btn btn-on" id="favicon-toggle-${formId}" onclick="toggleFavicon('${formId}', this)">ON</button>
+        <button class="animation-btn apply-all-btn" onclick="applyToAll('${formId}')">Apply To All</button>
+    <div class="options-menu-title">Button Color</div>
+    <input type="color" id="button-color-picker-${formId}" class="input-field" style="visibility: hidden; width: 0; height: 0; position: absolute;">
+    <button class="animation-btn" id="color-picker-trigger-${formId}" style="background-color: #c9c9c9;"><i class='bx bx-droplet'></i></button>
+    <button class="animation-btn apply-all-btn" onclick="applyColorToAll('${formId}')">Apply To All</button>
+    <div class="options-menu-title">Button Shape</div>
+    <button class="animation-btn" onclick="applyButtonShape('${formId}', 'squared')">Squared</button>
+    <button class="animation-btn btn-on" onclick="applyButtonShape('${formId}', 'rounded')">Rounded</button>
+    <button class="animation-btn" onclick="applyButtonShape('${formId}', 'pill')">Pill</button>
+    <button class="animation-btn apply-all-btn" onclick="applyShapeToAll('${formId}')">Apply To All</button>
+    <div class="options-menu-title">Locked Link</div>
+<button class="animation-btn lock-option-btn btn-on" onclick="applyLockOption('${formId}', 'none')">None</button>
+<button class="animation-btn lock-option-btn" onclick="applyLockOption('${formId}', 'code')">Code</button>
+<button class="animation-btn lock-option-btn" onclick="applyLockOption('${formId}', 'dob')">DOB</button>        `;
+                document.body.appendChild(optionsMenu);
+            }
+
+            // Add event listeners for the color picker and trigger button
+            const colorPicker = document.getElementById(`button-color-picker-${formId}`);
+            const colorPickerTrigger = document.getElementById(`color-picker-trigger-${formId}`);
+            colorPickerTrigger.addEventListener('click', function () {
+                console.log('Color picker trigger clicked for form ID:', formId);
+                colorPicker.click();
+            });
+            colorPicker.addEventListener('change', function () {
+                const color = this.value;
+                console.log('Color selected for form ID:', formId, 'Color:', color);
+                const link = document.querySelector(`.link[data-form-id="${formId}"]`);
+                if (link) {
+                    link.style.backgroundColor = color;
+                    const textColor = getLuminance(color) > 0.5 ? 'black' : 'white';
+                    link.style.color = textColor;
+                }
+                colorPickerTrigger.style.backgroundColor = color;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Recreate overlays for locked links
+            document.querySelectorAll('.link[data-lock-option]').forEach(link => {
+                const formId = link.getAttribute('data-form-id');
+                const lockType = link.getAttribute('data-lock-option');
+                createOverlay(formId, lockType);
+            });
+
+            // Attach event listeners for the color picker for each link form
+            document.querySelectorAll('.input-group').forEach(form => {
+                const formId = form.getAttribute('id');
+                createOptionsSubMenu(formId);
+            });
+        });
+
+
+        function applyColorToAll(formId) {
+            const currentOptions = document.getElementById(`options-menu-${formId}`);
+            const colorPicker = currentOptions.querySelector(`#button-color-picker-${formId}`);
+            const selectedColor = colorPicker.value;
+
+            document.querySelectorAll('.link').forEach(link => {
+                const linkFormId = link.getAttribute('data-form-id');
+                const linkOptionsMenu = document.getElementById(`options-menu-${linkFormId}`);
+                if (linkOptionsMenu) {
+                    const linkColorPicker = linkOptionsMenu.querySelector(`#button-color-picker-${linkFormId}`);
+                    linkColorPicker.value = selectedColor;
+                    const textColor = getLuminance(selectedColor) > 0.5 ? 'black' : 'white';
+                    link.style.backgroundColor = selectedColor;
+                    link.style.color = textColor;
+
+                    // Update the color picker trigger button background color
+                    const linkColorPickerTrigger = linkOptionsMenu.querySelector(`#color-picker-trigger-${linkFormId}`);
+                    linkColorPickerTrigger.style.backgroundColor = selectedColor;
+                }
+            });
+        }
+
+
+        function updateYoutubeEmbedBorderRadius(shape) {
+            const youtubeIframe = document.querySelector('.youtube-iframe');
+            if (youtubeIframe) {
+                switch (shape) {
+                    case 'squared':
+                        youtubeIframe.style.borderRadius = '0px';
+                        break;
+                    case 'rounded':
+                        youtubeIframe.style.borderRadius = '8px';
+                        break;
+                    case 'pill':
+                        youtubeIframe.style.borderRadius = '20px';
+                        break;
+                }
+            }
+        }
+
+        function applyButtonShape(formId, shape) {
+            const link = document.querySelector(`.link[data-form-id="${formId}"]`);
+            if (link) {
+                switch (shape) {
+                    case 'squared':
+                        link.style.borderRadius = '0px';
+                        break;
+                    case 'rounded':
+                        link.style.borderRadius = '8px';
+                        break;
+                    case 'pill':
+                        link.style.borderRadius = '20px';
+                        break;
+                }
+            }
+
+            // Toggle the "btn-on" class for shape buttons
+            const optionsMenu = document.getElementById(`options-menu-${formId}`);
+            const shapeButtons = optionsMenu.querySelectorAll('.animation-btn:not(.apply-all-btn)');
+            shapeButtons.forEach(button => {
+                if (button.textContent.toLowerCase() === shape) {
+                    button.classList.add('btn-on');
+                    button.classList.remove('btn-off');
+                } else {
+                    button.classList.remove('btn-on');
+                    button.classList.add('btn-off');
+                }
+            });
+        }
+
+
+        function applyShapeToAll(formId) {
+            const currentOptions = document.getElementById(`options-menu-${formId}`);
+            const shapeButtons = currentOptions.querySelectorAll('.animation-btn:not(.apply-all-btn)');
+            let selectedShape = '';
+            shapeButtons.forEach(button => {
+                if (button.classList.contains('btn-on')) {
+                    selectedShape = button.textContent.toLowerCase();
+                }
+            });
+
+            document.querySelectorAll('.link').forEach(link => {
+                const linkFormId = link.getAttribute('data-form-id');
+                applyButtonShape(linkFormId, selectedShape);
+                // Update the options menu for each link to reflect the selected shape
+                const linkOptionsMenu = document.getElementById(`options-menu-${linkFormId}`);
+                if (linkOptionsMenu) {
+                    const linkShapeButtons = linkOptionsMenu.querySelectorAll('.animation-btn:not(.apply-all-btn)');
+                    linkShapeButtons.forEach(button => {
+                        if (button.textContent.toLowerCase() === selectedShape) {
+                            button.classList.add('btn-on');
+                            button.classList.remove('btn-off');
+                        } else {
+                            button.classList.remove('btn-on');
+                            button.classList.add('btn-off');
+                        }
+                    });
+                }
+            });
+            updateYoutubeEmbedBorderRadius(selectedShape);
+        }
+
+
+
+
+        function toggleFavicon(formId, button) {
+            const link = document.querySelector(`.link[data-form-id="${formId}"]`);
+            if (link) {
+                const img = link.querySelector('img');
+                if (img) {
+                    if (button.textContent === 'ON') {
+                        img.style.display = 'none';
+                        button.textContent = 'OFF';
+                        button.classList.remove('btn-on');
+                        button.classList.add('btn-off');
+                    } else {
+                        img.style.display = 'inline';
+                        button.textContent = 'ON';
+                        button.classList.remove('btn-off');
+                        button.classList.add('btn-on');
+                    }
+                }
+            }
+        }
+
+
+        function applyToAll(formId) {
+            const currentOptions = document.getElementById(`options-menu-${formId}`);
+            const faviconToggleBtn = currentOptions.querySelector(`#favicon-toggle-${formId}`);
+            const showFavicon = faviconToggleBtn.textContent === 'ON';
+
+            document.querySelectorAll('.favicon-toggle-btn').forEach(btn => {
+                const otherFormId = btn.id.replace('favicon-toggle-', '');
+                if (otherFormId !== formId) {
+                    btn.textContent = showFavicon ? 'OFF' : 'ON';
+                    toggleFavicon(otherFormId, btn);
+                }
+            });
+        }
+
+
+
+        function applyAnimation(formId, animationType) {
+            const linkToAnimate = document.querySelector(`.link[data-form-id="${formId}"]`);
+
+            // Reset all possible animation classes
+            linkToAnimate.classList.remove('animated-link', 'animated-wobble', 'animated-wiggle');
+
+            if (animationType === 'none') {
+                // If "None" is selected, simply remove any animations and exit the function
+                currentlyAnimatedLinkId = null; // Clear the currently animated link ID
+                return;
+            }
+
+            // Apply the selected animation class based on user choice
+            switch (animationType) {
+                case 'pop':
+                    linkToAnimate.classList.add('animated-link');
+                    break;
+                case 'wobble':
+                    linkToAnimate.classList.add('animated-wobble');
+                    break;
+                case 'wiggle':
+                    linkToAnimate.classList.add('animated-wiggle');
+                    break;
+            }
+            currentlyAnimatedLinkId = formId; // Update the currently animated link ID
+        }
+
+
+
+
+        function showOptions(formId) {
+            const optionsMenu = document.getElementById(`options-menu-${formId}`);
+            if (optionsMenu) {
+                optionsMenu.style.display = 'block';
+                // Position the menu programmatically if needed
+                positionOptionsMenu(formId);
+            }
+        }
+
+        function positionOptionsMenu(formId) {
+            const mainLinksMenu = document.getElementById('main-links-menu');
+            const optionsMenu = document.getElementById(`options-menu-${formId}`);
+
+            if (mainLinksMenu && optionsMenu) {
+                const rect = mainLinksMenu.getBoundingClientRect();
+
+                optionsMenu.style.width = '400px';
+                optionsMenu.style.height = `400px`; // Dynamically match the height of the main links submenu
+                optionsMenu.style.top = `${rect.top + window.scrollY}px`; // Adjust top position to match main links submenu
+                optionsMenu.style.left = `${rect.left}px`; // Adjust left position to match main links submenu
+            }
+        }
+
+
+
+        function closeOptionsMenu(formId) {
+            const optionsMenu = document.getElementById(`options-menu-${formId}`);
+            if (optionsMenu) {
+                optionsMenu.style.display = 'none';
+            }
+        }
+
+
+
+
+
+        // Save Progress Button
+        document.getElementById('save-progress-btn').addEventListener('click', function () {
+            // Update the value attributes of all input elements to match their current contents
+            const inputs = document.querySelectorAll('input[type="text"], input[type="password"]');
+            inputs.forEach(input => {
+                input.setAttribute('value', input.value);
+            });
+
+            // Serialize the checkbox states
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    checkbox.setAttribute('checked', 'checked');
+                } else {
+                    checkbox.removeAttribute('checked');
+                }
+            });
+
+            // Get the current HTML content of the document
+            const htmlContent = `<!DOCTYPE html>\n` + document.documentElement.outerHTML;
+
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+
+            // Get the user's name and the current date
+            const userName = document.querySelector('h1').textContent.trim() || 'No-Name';
+            const currentDate = new Date().toISOString().slice(0, 10); // Format: YYYY-MM-DD
+
+            // Create the filename using the format "LinkInBio-Username-the date"
+            const filename = `SAVE-LinkInBio-${userName}-${currentDate}.html`;
+
+            // Create a link element for downloading
+            const downloadLink = document.createElement('a');
+            downloadLink.href = URL.createObjectURL(blob);
+            downloadLink.download = filename; // Use the created filename
+
+            // Append the link to the document, trigger the download, and then remove the link
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        });
+
+
+
+        function downloadHTML() {
+            // Remember which configuration menus and overlays are currently visible
+            var visibleConfigMenus = Array.from(document.querySelectorAll('.menu, #mobile-overlay, .options-menu')).filter(function (menu) {
+                return window.getComputedStyle(menu).display !== 'none';
+            });
+
+            // Hide all configuration menus and overlays
+            var configMenus = document.querySelectorAll('.menu, .background-effects-menu, .profile-shape-menu, #mobile-overlay, .options-menu');
+            configMenus.forEach(function (menu) {
+                menu.style.display = 'none';
+            });
+
+
+
+            // Capture the HTML content of the page
+            var htmlContent = document.documentElement.outerHTML;
+
+            // Restore the visibility of the previously visible configuration menus and overlays
+            visibleConfigMenus.forEach(function (menu) {
+                menu.style.display = '';
+            });
+
+            // Get the user's name and the current date
+            const userName = document.querySelector('h1').textContent.trim() || 'No-Name';
+            const currentDate = new Date().toISOString().slice(0, 10); // Format: YYYY-MM-DD
+
+            // Create the filename using the format "FINAL-LinkInBio-Username-date"
+            const filename = `LinkInBio-${userName}-${currentDate}.txt`;
+
+            // Create a blob and download the file
+            var blob = new Blob([htmlContent], { type: 'text/plain' });
+            var downloadLink = document.createElement('a');
+            downloadLink.href = URL.createObjectURL(blob);
+            downloadLink.download = filename;
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+
+
+
+
+        // Download Button
+        document.getElementById('download-btn').addEventListener('click', function () {
+            // Wait for a few milliseconds and then capture and download the HTML
+            setTimeout(downloadHTML, 100); // 100 milliseconds is usually enough
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Recreate overlays for locked links
+            document.querySelectorAll('.link[data-lock-option]').forEach(link => {
+                const formId = link.getAttribute('data-form-id');
+                const lockType = link.getAttribute('data-lock-option');
+                createOverlay(formId, lockType);
+            });
+        });
+
+        // Add event listener to the name input field
+        document.getElementById('name-input').addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                document.getElementById('submit-name').click();
+            }
+        });
+
+        // Add event listener to the profile picture input field
+        document.getElementById('profile-pic-link').addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                document.getElementById('submit-profile-pic').click();
+            }
+        });
+
+        // Add event listener to the background input field
+        document.getElementById('background-link').addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                document.getElementById('submit-background').click();
+            }
+        });
+
+        // Add event listener to the YouTube link input field
+        document.getElementById('youtube-link').addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                document.getElementById('youtube-submit').click();
+            }
+        });
+
+        // Add event listener to each social link input field
+        document.querySelectorAll('.social-link-input').forEach(function (input) {
+            input.addEventListener('keypress', function (event) {
+                if (event.key === 'Enter') {
+                    const platform = input.id.replace('input-', '');
+                    submitSocialLink(platform);
+                }
+            });
+        });
+
+        // Add event listener to the password input field
+        document.getElementById('password-input').addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                document.getElementById('password-submit').click();
+            }
+        });
+
+        document.getElementById('password-submit').addEventListener('click', function () {
+            var enteredPassword = document.getElementById('password-input').value;
+
+            var licenseKeyPattern = /^[a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}$/;
+
+            if (licenseKeyPattern.test(enteredPassword)) {
+                var overlay = document.getElementById('welcome-overlay');
+                if (overlay) {
+                    overlay.parentNode.removeChild(overlay);
+                }
+            } else {
+                var passwordError = document.getElementById('password-error');
+                passwordError.style.display = 'block';
+                passwordError.textContent = "Incorrect License Key!";
+            }
+        });
+
+
+
+
+    </script>
+
+
+
+<div id="options-menu-null" class="options-menu" style="display: none;">
+    <span class="close-btn" onclick="closeOptionsMenu('null')"><i class="bx bx-x"></i></span>
+    <div class="animation-options-header">Options</div>
+    <div class="options-menu-title">Animation</div>
+    <button class="animation-btn" onclick="applyAnimation('null', 'none')">None</button>
+    <button class="animation-btn" onclick="applyAnimation('null', 'pop')">Pop</button>
+    <button class="animation-btn" onclick="applyAnimation('null', 'wobble')">Wobble</button>
+    <button class="animation-btn" onclick="applyAnimation('null', 'wiggle')">Wiggle</button>
+    <div class="options-menu-title">Favicon</div>
+        <button class="animation-btn favicon-toggle-btn btn-on" id="favicon-toggle-null" onclick="toggleFavicon('null', this)">OFF</button>
+        <button class="animation-btn apply-all-btn" onclick="applyToAll('null')">Apply To All</button>
+    <div class="options-menu-title">Button Color</div>
+    <input type="color" id="button-color-picker-null" class="input-field" style="visibility: hidden; width: 0; height: 0; position: absolute;">
+    <button class="animation-btn" id="color-picker-trigger-null" style="background-color: rgb(201, 201, 201); --darkreader-inline-bgcolor: #363b3d;" data-darkreader-inline-bgcolor=""><i class="bx bx-droplet"></i></button>
+    <button class="animation-btn apply-all-btn" onclick="applyColorToAll('null')">Apply To All</button>
+    <div class="options-menu-title">Button Shape</div>
+    <button class="animation-btn" onclick="applyButtonShape('null', 'squared')">Squared</button>
+    <button class="animation-btn btn-on" onclick="applyButtonShape('null', 'rounded')">Rounded</button>
+    <button class="animation-btn" onclick="applyButtonShape('null', 'pill')">Pill</button>
+    <button class="animation-btn apply-all-btn" onclick="applyShapeToAll('null')">Apply To All</button>
+    <div class="options-menu-title">Locked Link</div>
+<button class="animation-btn lock-option-btn btn-on" onclick="applyLockOption('null', 'none')">None</button>
+<button class="animation-btn lock-option-btn" onclick="applyLockOption('null', 'code')">Code</button>
+<button class="animation-btn lock-option-btn" onclick="applyLockOption('null', 'dob')">DOB</button>        </div><div id="options-menu-link-form-8" class="options-menu" style="display: none;">
+    <span class="close-btn" onclick="closeOptionsMenu('link-form-8')"><i class="bx bx-x"></i></span>
+    <div class="animation-options-header">Options</div>
+    <div class="options-menu-title">Animation</div>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-8', 'none')">None</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-8', 'pop')">Pop</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-8', 'wobble')">Wobble</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-8', 'wiggle')">Wiggle</button>
+    <div class="options-menu-title">Favicon</div>
+        <button class="animation-btn favicon-toggle-btn btn-on" id="favicon-toggle-link-form-8" onclick="toggleFavicon('link-form-8', this)">ON</button>
+        <button class="animation-btn apply-all-btn" onclick="applyToAll('link-form-8')">Apply To All</button>
+    <div class="options-menu-title">Button Color</div>
+    <input type="color" id="button-color-picker-link-form-8" class="input-field" style="visibility: hidden; width: 0; height: 0; position: absolute;">
+    <button class="animation-btn btn-off" id="color-picker-trigger-link-form-8" style="background-color: rgb(255, 255, 255); --darkreader-inline-bgcolor: #181a1b;" data-darkreader-inline-bgcolor=""><i class="bx bx-droplet"></i></button>
+    <button class="animation-btn apply-all-btn" onclick="applyColorToAll('link-form-8')">Apply To All</button>
+    <div class="options-menu-title">Button Shape</div>
+    <button class="animation-btn btn-off" onclick="applyButtonShape('link-form-8', 'squared')">Squared</button>
+    <button class="animation-btn btn-off" onclick="applyButtonShape('link-form-8', 'rounded')">Rounded</button>
+    <button class="animation-btn btn-on" onclick="applyButtonShape('link-form-8', 'pill')">Pill</button>
+    <button class="animation-btn apply-all-btn" onclick="applyShapeToAll('link-form-8')">Apply To All</button>
+    <div class="options-menu-title">Locked Link</div>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-8', 'none')">None</button>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-8', 'code')">Code</button>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-8', 'dob')">DOB</button>        </div><div id="options-menu-link-form-9" class="options-menu" style="display: none;">
+    <span class="close-btn" onclick="closeOptionsMenu('link-form-9')"><i class="bx bx-x"></i></span>
+    <div class="animation-options-header">Options</div>
+    <div class="options-menu-title">Animation</div>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-9', 'none')">None</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-9', 'pop')">Pop</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-9', 'wobble')">Wobble</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-9', 'wiggle')">Wiggle</button>
+    <div class="options-menu-title">Favicon</div>
+        <button class="animation-btn favicon-toggle-btn btn-on" id="favicon-toggle-link-form-9" onclick="toggleFavicon('link-form-9', this)">ON</button>
+        <button class="animation-btn apply-all-btn" onclick="applyToAll('link-form-9')">Apply To All</button>
+    <div class="options-menu-title">Button Color</div>
+    <input type="color" id="button-color-picker-link-form-9" class="input-field" style="visibility: hidden; width: 0; height: 0; position: absolute;">
+    <button class="animation-btn btn-off" id="color-picker-trigger-link-form-9" style="background-color: rgb(255, 255, 255); --darkreader-inline-bgcolor: #181a1b;" data-darkreader-inline-bgcolor=""><i class="bx bx-droplet"></i></button>
+    <button class="animation-btn apply-all-btn" onclick="applyColorToAll('link-form-9')">Apply To All</button>
+    <div class="options-menu-title">Button Shape</div>
+    <button class="animation-btn btn-off" onclick="applyButtonShape('link-form-9', 'squared')">Squared</button>
+    <button class="animation-btn btn-off" onclick="applyButtonShape('link-form-9', 'rounded')">Rounded</button>
+    <button class="animation-btn btn-on" onclick="applyButtonShape('link-form-9', 'pill')">Pill</button>
+    <button class="animation-btn apply-all-btn" onclick="applyShapeToAll('link-form-9')">Apply To All</button>
+    <div class="options-menu-title">Locked Link</div>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-9', 'none')">None</button>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-9', 'code')">Code</button>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-9', 'dob')">DOB</button>        </div><div id="options-menu-link-form-10" class="options-menu" style="display: none;">
+    <span class="close-btn" onclick="closeOptionsMenu('link-form-10')"><i class="bx bx-x"></i></span>
+    <div class="animation-options-header">Options</div>
+    <div class="options-menu-title">Animation</div>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-10', 'none')">None</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-10', 'pop')">Pop</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-10', 'wobble')">Wobble</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-10', 'wiggle')">Wiggle</button>
+    <div class="options-menu-title">Favicon</div>
+        <button class="animation-btn favicon-toggle-btn btn-on" id="favicon-toggle-link-form-10" onclick="toggleFavicon('link-form-10', this)">ON</button>
+        <button class="animation-btn apply-all-btn" onclick="applyToAll('link-form-10')">Apply To All</button>
+    <div class="options-menu-title">Button Color</div>
+    <input type="color" id="button-color-picker-link-form-10" class="input-field" style="visibility: hidden; width: 0; height: 0; position: absolute;">
+    <button class="animation-btn btn-off" id="color-picker-trigger-link-form-10" style="background-color: rgb(255, 255, 255); --darkreader-inline-bgcolor: #181a1b;" data-darkreader-inline-bgcolor=""><i class="bx bx-droplet"></i></button>
+    <button class="animation-btn apply-all-btn" onclick="applyColorToAll('link-form-10')">Apply To All</button>
+    <div class="options-menu-title">Button Shape</div>
+    <button class="animation-btn btn-off" onclick="applyButtonShape('link-form-10', 'squared')">Squared</button>
+    <button class="animation-btn btn-off" onclick="applyButtonShape('link-form-10', 'rounded')">Rounded</button>
+    <button class="animation-btn btn-on" onclick="applyButtonShape('link-form-10', 'pill')">Pill</button>
+    <button class="animation-btn apply-all-btn" onclick="applyShapeToAll('link-form-10')">Apply To All</button>
+    <div class="options-menu-title">Locked Link</div>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-10', 'none')">None</button>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-10', 'code')">Code</button>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-10', 'dob')">DOB</button>        </div><div id="options-menu-link-form-11" class="options-menu" style="display: none;">
+    <span class="close-btn" onclick="closeOptionsMenu('link-form-11')"><i class="bx bx-x"></i></span>
+    <div class="animation-options-header">Options</div>
+    <div class="options-menu-title">Animation</div>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-11', 'none')">None</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-11', 'pop')">Pop</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-11', 'wobble')">Wobble</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-11', 'wiggle')">Wiggle</button>
+    <div class="options-menu-title">Favicon</div>
+        <button class="animation-btn favicon-toggle-btn btn-on" id="favicon-toggle-link-form-11" onclick="toggleFavicon('link-form-11', this)">ON</button>
+        <button class="animation-btn apply-all-btn" onclick="applyToAll('link-form-11')">Apply To All</button>
+    <div class="options-menu-title">Button Color</div>
+    <input type="color" id="button-color-picker-link-form-11" class="input-field" style="visibility: hidden; width: 0; height: 0; position: absolute;">
+    <button class="animation-btn btn-off" id="color-picker-trigger-link-form-11" style="background-color: rgb(255, 255, 255); --darkreader-inline-bgcolor: #181a1b;" data-darkreader-inline-bgcolor=""><i class="bx bx-droplet"></i></button>
+    <button class="animation-btn apply-all-btn" onclick="applyColorToAll('link-form-11')">Apply To All</button>
+    <div class="options-menu-title">Button Shape</div>
+    <button class="animation-btn btn-off" onclick="applyButtonShape('link-form-11', 'squared')">Squared</button>
+    <button class="animation-btn btn-off" onclick="applyButtonShape('link-form-11', 'rounded')">Rounded</button>
+    <button class="animation-btn btn-on" onclick="applyButtonShape('link-form-11', 'pill')">Pill</button>
+    <button class="animation-btn apply-all-btn" onclick="applyShapeToAll('link-form-11')">Apply To All</button>
+    <div class="options-menu-title">Locked Link</div>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-11', 'none')">None</button>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-11', 'code')">Code</button>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-11', 'dob')">DOB</button>        </div><div id="options-menu-link-form-12" class="options-menu" style="display: none; width: 400px; height: 400px; top: 490px; left: 1406px;">
+    <span class="close-btn" onclick="closeOptionsMenu('link-form-12')"><i class="bx bx-x"></i></span>
+    <div class="animation-options-header">Options</div>
+    <div class="options-menu-title">Animation</div>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-12', 'none')">None</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-12', 'pop')">Pop</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-12', 'wobble')">Wobble</button>
+    <button class="animation-btn btn-off" onclick="applyAnimation('link-form-12', 'wiggle')">Wiggle</button>
+    <div class="options-menu-title">Favicon</div>
+        <button class="animation-btn favicon-toggle-btn btn-on" id="favicon-toggle-link-form-12" onclick="toggleFavicon('link-form-12', this)">ON</button>
+        <button class="animation-btn apply-all-btn" onclick="applyToAll('link-form-12')">Apply To All</button>
+    <div class="options-menu-title">Button Color</div>
+    <input type="color" id="button-color-picker-link-form-12" class="input-field" style="visibility: hidden; width: 0; height: 0; position: absolute;">
+    <button class="animation-btn btn-off" id="color-picker-trigger-link-form-12" style="background-color: rgb(255, 255, 255); --darkreader-inline-bgcolor: #363b3d;" data-darkreader-inline-bgcolor=""><i class="bx bx-droplet"></i></button>
+    <button class="animation-btn apply-all-btn" onclick="applyColorToAll('link-form-12')">Apply To All</button>
+    <div class="options-menu-title">Button Shape</div>
+    <button class="animation-btn btn-off" onclick="applyButtonShape('link-form-12', 'squared')">Squared</button>
+    <button class="animation-btn btn-off" onclick="applyButtonShape('link-form-12', 'rounded')">Rounded</button>
+    <button class="animation-btn btn-on" onclick="applyButtonShape('link-form-12', 'pill')">Pill</button>
+    <button class="animation-btn apply-all-btn" onclick="applyShapeToAll('link-form-12')">Apply To All</button>
+    <div class="options-menu-title">Locked Link</div>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-12', 'none')">None</button>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-12', 'code')">Code</button>
+<button class="animation-btn lock-option-btn btn-off" onclick="applyLockOption('link-form-12', 'dob')">DOB</button>        </div></body></html>
